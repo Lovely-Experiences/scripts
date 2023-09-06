@@ -30,7 +30,7 @@ echo "> Are you sure?\n> Repo: (${repoUrl})\n> Path: $(pwd)\n> (Y/N): "
 read confirm
 
 # Check if the variable is the right character.
-if [ $confirm='Y' || $confirm='y' ]; then
+if [ $confirm == "y" ]; then
     clear
 else
     clear
