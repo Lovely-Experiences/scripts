@@ -26,7 +26,7 @@ mkdir ./${name}
 cd ./${name}
 
 # Ask for confirmation.
-echo "> Are you sure you would like to clone (${repoUrl}) into $(pwd)? (Y/N)"
+echo "> Are you sure?\n> Repo: (${repoUrl})\n> Path: $(pwd)\n> (Y/N): "
 read confirm
 if [ $confirm == "Y" ]; then
     clear
