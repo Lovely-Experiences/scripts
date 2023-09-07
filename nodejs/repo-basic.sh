@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Prevent command echos.
 @echo off
