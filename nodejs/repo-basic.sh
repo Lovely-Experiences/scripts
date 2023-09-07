@@ -38,7 +38,7 @@ echo "> Path: $(pwd)"
 read -p "> (yes/no): " answer
 case $answer in
     [Yy]* ) clear;;
-        * ) clear; cd -; rmdir ./${name}; exit 1;;
+    * ) clear; cd -; rmdir ./${name}; exit 1;;
 esac
 
 # Echo node and npm version.
