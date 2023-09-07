@@ -7,8 +7,8 @@ Random scripts that may do some useful things!
 Clone a repository and install it's dependencies.
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+curl -o- https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/nodejs/repo-basic.sh | bash
 ```
 ```
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/nodejs/repo-basic.sh | bash
 ```

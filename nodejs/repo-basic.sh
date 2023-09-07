@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Prevent command echos.
 @echo off
@@ -16,36 +16,45 @@ echo "> What would you like to name the folder?"
 read name
 clear
 
-# Ask for repo git URL.
-echo "> What is the repo git URL?"
+# Ask for git URL.
+echo "> What is the git URL?"
 read repoUrl
 clear
 
+# Error function.
+error_result() {
+    echo "Error! $1"
+    exit 1
+}
+
 # Create directory, then open it.
-mkdir ./${name}
+mkdir ./${name} || error_result "> Failed to create directory."
 cd ./${name}
 
 # Ask for confirmation.
-echo "> Are you sure?\n> Repo: (${repoUrl})\n> Path: $(pwd)\n> (Y/N): "
-read confirm
+echo "> Are you sure?"
+echo "> Repo: ${repoUrl}"
+echo "> Path: $(pwd)"
+read -p "> (yes/no): " answer
+case $answer in
+    [Yy]* ) clear;;
+        * ) clear; cd -; rmdir ./${name}; exit 1;;
+esac
 
-# Check if the variable is the right character.
-if [ $confirm == "y" ]; then
-    clear
-else
-    clear
-    cd -
-    rmdir ./${name}
-    clear
-    exit 1
-fi
+# Echo node and npm version.
+echo "> Versions..."
+echo "Node.js $(node -v)"
+echo "npm v$(npm -v)"
 
-# Clone the repo and then clean install deps.
+# Clone the repo.
+echo "> Cloning repository..."
 git clone ${repoUrl} .
+
+# Clean install deps.
+echo "> Installing dependencies..."
 npm ci
 
-# Clear ouput and ask closing question.
-clear
+# Ask closing question.
 echo "> Press ENTER to close..."
 read
 clear
