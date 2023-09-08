@@ -4,7 +4,16 @@
 declare -a files
 files[0]="nodejs/repo-basic.sh"
 
+path="./scripts-$(date +%s)"
+url="https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/"
+
+mkdir ${path}
+cd ${path}
+
 for i in ${files[@]}
 do
-    echo $i
+    echo "Downloading... ${i}"
+    curl -O ${url}${i} || wget -O ${url}${i}
 done
+
+echo "Finished! -> $(pwd)"

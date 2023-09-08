@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Prevent command echos.
-@echo off
-
 # Clear console.
 clear
 
