@@ -11,4 +11,4 @@ wget -qO- https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/inst
 ```
 
 ## Node.js - `/nodejs/`
-**repo-basic.sh** - Clone a repository and install it's dependencies (clean install).
+**node-repo-basic.sh** - Clone a repository and install it's dependencies (clean install).
