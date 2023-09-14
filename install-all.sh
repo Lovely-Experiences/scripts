@@ -15,7 +15,7 @@ cd ${path}
 for i in ${files[@]}
 do
     echo "Downloading... ${i}"
-    curl --insecure -s -O ${url}${i} || wget --no-check-certificate -q -O ${url}${i}
+    curl --insecure -O ${url}${i} || wget --no-check-certificate -q -O ${url}${i}
 done
 
 echo "Finished! -> $(pwd)"
