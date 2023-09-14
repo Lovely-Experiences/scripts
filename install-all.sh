@@ -4,6 +4,7 @@
 declare -a files
 files[0]="nodejs/node-repo-basic.sh"
 files[1]="random/console-rainbow.sh"
+files[2]="apache/windows/install.sh"
 
 path="./scripts-$(date +%s)"
 url="https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/"
