@@ -10,6 +10,6 @@ mkdir "C:/Server/Content"
 
 cd "C:/Server"
 
-curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/apache-windows.zip"
+curl -k -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/apache-windows.zip"
 
 unzip "./apache-windows.zip" -d "./Apache"
