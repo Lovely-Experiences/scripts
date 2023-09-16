@@ -16,13 +16,13 @@ mkdir "C:/Server/Content"
 
 cd "C:/Server"
 
-curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/apache-windows.zip"
+curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/zips/apache-windows.zip"
 
-curl -O "https://github.com/Lovely-Experiences/Directory-Viewer/releases/download/v1.0.0/files.zip"
+curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/zips/content.zip"
 
 unzip "./apache-windows.zip" -d "./Apache"
 
-unzip "./files.zip" -d "./Content"
+unzip "./content.zip" -d "./Content"
 
 rm "./apache-windows.zip"
 
