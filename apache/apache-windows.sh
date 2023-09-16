@@ -20,11 +20,15 @@ curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apach
 
 curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/zips/content.zip"
 
+echo "debug"
+
 read
 
 unzip "./apache-windows.zip" -d "./Apache"
 
 unzip "./content.zip" -d "./Content"
+
+echo "debug"
 
 read
 
