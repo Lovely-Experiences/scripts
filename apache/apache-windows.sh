@@ -15,4 +15,4 @@ unzip "./apache-windows.zip" -d "./Apache"
 clear
 echo "Finished installation, press any key to open the folder for your web project(s)."
 read
-start %SystemRoot%\explorer.exe "C:/Server/Content"
+explorer "C:/Server/Content"
