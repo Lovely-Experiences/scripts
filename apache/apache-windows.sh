@@ -15,3 +15,4 @@ unzip "./apache-windows.zip" -d "./Apache"
 clear
 echo "Finished installation, press any key to open the folder for your web project(s)."
 read
+clear
