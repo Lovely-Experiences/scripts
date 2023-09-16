@@ -14,31 +14,33 @@ mkdir "C:/Server/Apache"
 
 mkdir "C:/Server/Content"
 
+mkdir "C:/Server/PHP"
+
 cd "C:/Server"
 
 curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/zips/apache-windows.zip"
 
+curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/zips/php.zip"
+
 curl -O "https://raw.githubusercontent.com/Lovely-Experiences/scripts/main/apache/zips/content.zip"
-
-echo "debug"
-
-read
 
 unzip "./apache-windows.zip" -d "./Apache"
 
+unzip "./php.zip" -d "./PHP"
+
 unzip "./content.zip" -d "./Content"
-
-echo "debug"
-
-read
 
 rm "./apache-windows.zip"
 
-rm "./files.zip"
+rm "./php.zip"
 
-clear
+rm "./content.zip"
 
-echo "Finished installation, press any key to open the folder for your web project(s)."
+"C:\Server\Apache\bin\httpd.exe" -k install
+
+net start Apache2.4
+
+echo "Your server should now be running at http://localhost:5555, press any key to open the folder for your web project(s)."
 
 read
 
