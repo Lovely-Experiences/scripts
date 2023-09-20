@@ -36,7 +36,7 @@ rm "./php.zip"
 
 rm "./content.zip"
 
-"C:\Server\Apache\bin\httpd.exe" -k install
+"C:\Server\Apache\bin\httpd.exe" -k install | echo "Already installed service!"
 
 net start Apache2.4
 
